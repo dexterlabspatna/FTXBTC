@@ -49,8 +49,8 @@ class FtxClient:
                 raise Exception(data['error'])
             return data['result']
         
-    def place_order(self, market: str, side: str, price: float = null, size: float, client_id: str = '1234',
-                    type: str = 'market', reduce_only: bool = False, ioc: bool = False, post_only: bool = False,
+    def place_order(self, market: str, side: str, price: float, size: float, client_id: str,
+                    type: str, reduce_only: bool = False, ioc: bool = False, post_only: bool = False,
                     ) -> dict:
         return self._post('orders', {'market': market,
                                      'side': side,

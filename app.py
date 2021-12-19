@@ -21,7 +21,7 @@ def log():
 def webhook():
     print(request.data)
     data = json.loads(request.data)
-    result = c.place_order("BTC-PERP", data["transaction_type"])
+    result = c.place_order("BTC-PERP", data["transaction_type"], null, data["size"], "1234", "market")
     print(result)
     return{
         "code": "error",
