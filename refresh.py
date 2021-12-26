@@ -1,7 +1,7 @@
 import requests
 import time
 
-URL = "https://zerodha-test1.herokuapp.com/welcome"
+URL = "https://abhishek-ftx-btc.herokuapp.com/welcome"
 
 while True:
     r = requests.get(url = URL)
